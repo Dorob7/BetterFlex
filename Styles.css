@@ -1,0 +1,233 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Anton', serif;
+    background-color: rgb(43, 0, 13);
+  }
+  
+  h1 {
+    font-family: 'Anton', sans-serif;
+    margin: 10px;
+  }
+  
+  h2, h3 {
+    font-family: 'Anton', sans-serif;
+    color: white;
+  }
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #00005c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    color: #dfdfe2;
+}
+  
+#logo {
+    width: max(100px, 18vw);
+    padding: 0;
+    margin: 0;
+    align-self:auto;
+}
+  
+h1 {
+    color: rgb(247, 230, 211);
+    font-size: min(7vw, 1.2em);
+    font-size: 4rem;
+    text-align: center;
+}
+  
+nav {
+    width: 1000px;
+    max-width: 350px;
+    height: 50px;
+    text-wrap: nowrap;
+    padding-right: 400px;
+}
+  
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    font-size: 2.2rem;
+    width: 100%;
+}
+  
+nav > ul > li {
+    color: white;
+    margin: 0 0.2rem;
+    padding: 0.2rem 0.5rem;
+    display: block;
+    text-align: center;
+    flex: 1;
+}
+  
+nav > ul > li:hover {
+    background-color: rgb(136, 22, 56);
+    color: white;
+    cursor: pointer;
+}
+  
+li > a {
+    color: rgb(247, 230, 211);
+    text-decoration: solid;
+    font-family: 'Anton', sans-serif;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto 10px auto;
+    max-width: 600px;
+}
+
+main {
+    padding-top: 50px;
+}
+
+.Emails, .OneDrive, .Dashboard, .g-drive {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_loc {
+    display: flex;
+    padding: 10px;
+    flex: 0 0 auto;
+    width: max-content;
+    margin: 15px;
+    align-items: center;
+    max-width: max-content;
+    margin-top: 20px;
+    justify-content: center;
+
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+    background: linear-gradient(to bottom right,rgb(136, 22, 56),rgb(216, 61, 103));
+    border: 3px solid black;
+    outline: 3px solid #000749;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-gap: 10px;
+    padding: 10px;
+    flex: 0 0 auto;
+    width: max-content;
+    margin: 15px;
+    align-items: center;
+    max-width: max-content;
+    margin-top: 20px;
+    justify-content: center;
+
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+    background: linear-gradient(to bottom right,rgb(136, 22, 56),rgb(216, 61, 103));
+    border: 3px solid black;
+    outline: 3px solid #000749;
+}
+
+.container a {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+    gap: 10px;
+    display: block;
+}
+a {
+    max-width: fit-content;
+}
+
+section {
+    max-width: fit-content;
+}
+
+button {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(321, 165, 114);
+    background-image: linear-gradient(to top left, rgb(247, 230, 211), rgb(224, 163, 93));
+    border: 3px solid #000749;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    margin: 6px;
+    align-items: center;
+
+    flex: 1;
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+}
+
+.container button {
+    width: 100%;
+}
+
+button:active {
+    transform: translateY(2px); /* Add a slight downward shift when button is clicked */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    .container.OD a {
+        flex: 0 0 calc(50% - 20px); /* Two buttons per row */
+        height: 30px; /* Reduce height for smaller screens */
+        margin: 5px; /* Reduce margin for smaller screens */
+    }
+}
+
+/* Media query for larger screens (e.g., desktops) */
+@media screen and (min-width: 1200px) {
+    .container.OD a {
+        flex: 0 0 200px; /* Increase button width for larger screens */
+        height: 50px; /* Increase button height for larger screens */
+        margin: 15px; /* Increase margin for larger screens */
+    }
+}
+
+
+footer {
+    background-color: transparent;
+    color: #dfdfe2;
+    text-align: right;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    margin: 0 auto; 
+}
+
+.footer-content p {
+    margin: 0;
+    color: rgb(247, 230, 211);
+}
