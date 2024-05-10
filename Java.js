@@ -7,13 +7,27 @@ var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
 var day = currentDate.getDate().toString().padStart(2, '0');
 var formattedDate = day + '-' + month + '-' + year;
 
-const emailInd = "adrian.sedziak@cevalogistics.com,agnieszka.nowak@cevalogistics.com,ali.sahin@cevalogistics.com,bartosz.jamrozy@cevalogistics.com,jasper.schuller@cevalogistics.com,mo.el.mrabet@cevalogistics.com,haris.duratovic@cevalogistics.com,ellen.dumoulin@cevalogistics.com,roberta.katiliute@cevalogistics.com,magdalena.siegert@cevalogistics.com,edwin.van.vugt@cevalogistics.com,imnl.security.desk.industrieweg@cevalogistics.com?cc=sh-eu-nl-cls-flex.coaches@cevalogistics.com"
+const emailIND = "adrian.sedziak@cevalogistics.com,agnieszka.nowak@cevalogistics.com,ali.sahin@cevalogistics.com,bartosz.jamrozy@cevalogistics.com,jasper.schuller@cevalogistics.com,mo.el.mrabet@cevalogistics.com,haris.duratovic@cevalogistics.com,ellen.dumoulin@cevalogistics.com,roberta.katiliute@cevalogistics.com,magdalena.siegert@cevalogistics.com,edwin.van.vugt@cevalogistics.com,imnl.security.desk.industrieweg@cevalogistics.com?cc=sh-eu-nl-cls-flex.coaches@cevalogistics.com"
 const emailVW = "vw.beveiliging@bol.com?cc=sh-eu-nl-cls-flex.coaches@cevalogistics.com"
 const emailBFC = "bfc.beveiliging@bol.com?cc=sh-eu-nl-cls-flex.coaches@cevalogistics.com"
 const emailBRC = "brc.beveiliging@bol.com?cc=sh-eu-nl-cls-flex.coaches@cevalogistics.com"
+const emailBSE = "sh-gl-security.bestseller@cevalogistics.com,anna.romaniuk@cevalogistics.com,patrycja.papina@cevalogistics.com?cc=sh-eu-nl-cls-flex.coaches@cevalogistics.com"
+const wfpe = "SH-EU-CLS-BOL-Workforceplanning@Cevalogistics.com?cc=sh-eu-nl-cls-flex.coaches@cevalogistics.com"
+const wfpb = "SH-EU-CLS-Workforceplanning@cevalogistics.com?cc=sh-eu-nl-cls-flex.coaches@cevalogistics.com"
+
+const ind = document.getElementById("ind")
+const vw = document.getElementById("vw")
+const bfc = document.getElementById("bfc")
+const brc = document.getElementById("brc")
+
 
 function sendEmailAvailabilityIND() {
-    var emailLink = "mailto:" + emailInd + "&subject=Flex%20Coach%20Availability&body=Good%20day,%0D%0A%0D%0ADue%20to%20a%20meeting,%20I%20will%20not%20be%20available%20on%20the%20location%20today%20from%20[Time].%20For%20urgent%20matters%20you%20can%20call%20me.%0D%0A%0D%0AHave%20a%20good%20day!";
+    var emailLink = "mailto:" + emailIND + "&subject=Flex%20Coach%20Availability&body=Good%20day,%0D%0A%0D%0ADue%20to%20a%20meeting,%20I%20will%20not%20be%20available%20on%20the%20location%20today%20from%20[Time].%20For%20urgent%20matters%20you%20can%20call%20me.%0D%0A%0D%0AHave%20a%20good%20day!";
+    window.location.href = emailLink;
+}
+
+function sendEmailAvailabilityBSE() {
+    var emailLink = "mailto:" + emailBSE + "&subject=Flex%20Coach%20Availability&body=Good%20day,%0D%0A%0D%0ADue%20to%20a%20meeting,%20I%20will%20not%20be%20available%20on%20the%20location%20today%20from%20[Time].%20For%20urgent%20matters%20you%20can%20call%20me.%0D%0A%0D%0AHave%20a%20good%20day!";
     window.location.href = emailLink;
 }
 
@@ -33,21 +47,60 @@ function sendEmailPresentielijstBRC() {
 }
 
 function sendEmailRotationIND() {
-    var emailLink = "mailto:" + emailInd + "&subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
+    var emailLink = "mailto:" + emailIND + "&subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
     window.location.href = emailLink;
 }  
 
 function sendEmailRotationVW() {
-    var emailLink = "mailto:" + emailVW + "%subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
+    var emailLink = "mailto:" + emailVW + "&subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
     window.location.href = emailLink;
 }
 
 function sendEmailRotationBFC() {
-    var emailLink = "mailto:" + emailBFC + "%subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
+    var emailLink = "mailto:" + emailBFC + "&subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
     window.location.href = emailLink;
 }
 
 function sendEmailRotationBRC() {
-    var emailLink = "mailto:" + emailBRC + "%subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
+    var emailLink = "mailto:" + emailBRC + "&subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
     window.location.href = emailLink;
 }  
+
+function sendEmailRotationBSE() {
+    var emailLink = "mailto:" + emailBSE + "&subject=FC%20Building%20Rotation&body=Good%20afternoon%20everyone,%0D%0A%0D%0A%0D%0A%0D%0AFollowing%20the%20rotations%20in%20the%20Flexcoach%20team,%20next%20week,%20another%20member%20of%20our%20team%20will%20be%20working%20in%20[location].%0D%0A%0D%0AI%20would%20like%20to%20share%20with%20you%20the%20contact%20details%20of%20the%20Flexcoach%20who%20will%20be%20present%20here%20next%20week: %0D%0A%0D%0AName %20of%20the%20Flexcoach:%20[Name]%0D%0A%0D%0APhone%20Number:%20[PhoneNumber]%0D%0A%0D%0A%0D%0A%0D%0AHave%20a%20nice%20weekend.";
+    window.location.href = emailLink;
+}
+
+function sendEmailMulti(buttonId) {
+    let building = '';
+    let mail = '';
+
+    var year = currentDate.getFullYear();
+    var month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+    var day = (currentDate.getDate() - 1).toString().padStart(2, '0');
+    var date = day + '-' + month + '-' + year;
+
+    switch(buttonId) {
+        case 'vw':
+          building = 'VW';
+          email = wfpe;
+          break;
+        case 'ind':
+          building = 'IND';
+          email = wfpb;
+          break;
+        case 'bfc':
+          building = 'BFC';
+          email = wfpe;
+          break;
+        case 'brc':
+          building = 'BRC';
+          email = wfpe;
+          break;  
+        default:
+          break;          
+    }
+
+    var emailLink = "mailto:" + email + "?subject=" + encodeURIComponent(building + " - Instroom Multipand Update" + date) + "&body=Good day,%0D%0A%0D%0ABelow you will find update for the new instroom/Crosstraining multipand from [department].department.%0D%0A%0D%0A@Workforce, could you please remove the planning and skills for the no-shows and inform the agency about this?";
+    window.location.href = emailLink;
+}
