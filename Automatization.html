@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles.css" />
+    <script src="Java.js"></script>
+  </head>
+  <body>
+    <main>
+     <header> 
+      <h1>FC Automatization</h1>
+      <img id="logo" src="https://cdn.worldvectorlogo.com/logos/ceva-logistics-1.svg">
+      <nav>
+        <ul>
+          <li><a href="#Dashboard">Dashboard</a></li>
+          <li><a href="#Emails">Emails</a></li>
+          <li><a href="#OneDrive">One Drive</a></li>
+          <li><a href="#g-drive">G-Drive</a></li>
+        </ul>
+      </nav>
+     </header>
+     <section class="Dashboard" id="Dashboard">
+      <h1>Dashboard</h1>
+      <div class="container">
+        <a href="https://cevalogisticsoffice365.sharepoint.com/sites/Europe-NL-WorkforceOperations/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x01200040C5A6E2A628A0479C6CB13696F3D796&id=%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%2FGeneral%2FFlex%20Coaches%2FFC&viewid=80418985%2D4260%2D4e66%2Db50d%2D914a2f7d9ba5" target="_blank"><button class="SharePoint">SharePoint</button></a>
+        <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7BCBAEA41C-F18D-41A6-980A-B074407FAF35%7D&file=Instroom%20file%20-%20%20E-services.xlsx&action=default&mobileredirect=true" target="_blank"><button class="InstroomE-Service">Instroom E-Service</button></a>
+        <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7BA41C7E0E-D0E1-4138-BB64-54C3AF59345B%7D&file=Instroom%20file%20-%20Benelux.xlsx&action=default&mobileredirect=true" target="_blank"><button class="InstroomBenelux">Instroom Benelux</button></a>
+        <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7B7902194A-5F1C-40F5-A670-2292E20EDE0F%7D&file=Telefoonlijst%20FC.xlsx&action=default&mobileredirect=true" target="_blank"><button class="Phonebook">Phone Book</button></a>
+        <a href="https://cevalogisticsoffice365-my.sharepoint.com/personal/maximiliano_ocampo_cevalogistics_com/_layouts/15/onedrive.aspx?id=%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%2FGeneral%2FFlex%20Coaches%2FFC%2FBV%27s&listurl=https%3A%2F%2Fcevalogisticsoffice365%2Esharepoint%2Ecom%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents&viewid=80418985%2D4260%2D4e66%2Db50d%2D914a2f7d9ba5" target="_blank"><button class="Areas">Areas</button></a>
+        <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7B92211A42-A697-4D68-815C-D42D668C5FDF%7D&file=Werkrooster%20FC%202024%20Q1-Q4%20%20.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank"><button>Planning</button></a>
+        <a href="https://outlook.office.com/mail/" target="_blank"><button class="Outlook">Outlook</button></a>
+        <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7B79C4F093-3AD8-40FE-801A-CE43F808F632%7D&file=Flexcoach%20Email%20Templates.xlsx&action=default&mobileredirect=true" target="_blank"><button class="Template">Email's  Templates</button></a>
+        <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7BA61F796C-0F9C-49E2-8B64-8A4DC0170950%7D&file=Crosstraining%20tool%20NEW.xlsx&action=default&mobileredirect=true" target="_blank"><button>Crosstraining tool</button></a>
+        <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7BD1A22A33-EE8B-4B37-A1A0-9BE77418BC96%7D&file=Issue%20Report%202024.xlsx&action=default&mobileredirect=true" target="_blank"><button class="IssueFile">Issue File</button></a>
+      </div>
+    </section>
+      <section class="Emails" id="Emails">
+        <h1>Email's Templates</h1>
+        <div class="container loc">
+          <h2>IND</h2>
+          <button style="cursor: not-allowed;">No Presentielijst</button>
+          <button onclick="sendEmailAvailabilityIND()">Flex Coach Availability</button>
+          <button onclick="sendEmailRotationIND()">Building Rotation</button>
+        </div>
+        <div class="container loc">
+          <h2>VW</h2>
+          <button onclick="sendEmailPresentielijst()">Presentielijst</button>
+          <button onclick="sendEmailAvailabilityVW()">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
+          <button onclick="sendEmailRotationVW()">Building Rotation</button>
+
+        </div> 
+        <div class="container loc">
+          <h2>BFC</h2>
+          <button onclick="sendEmailPresentielijstBFC()">Presentielijst</button>
+          <button onclick="sendEmailAvailabilityBFC()">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
+          <button onclick="sendEmailRotationBFC()">Building Rotation</button>
+
+        </div>
+        <div class="container loc">
+          <h2>BRC</h2>
+          <button onclick="sendEmailPresentielijst()">Presentielijst</button>
+          <button onclick="sendEmailAvailabilityBRC()">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
+          <button onclick="sendEmailRotationBRC()">Building Rotation</button>
+
+        </div>
+        <div class="container loc">
+          <h2>BSE</h2>
+          <button style="cursor: not-allowed;">No Presentielijst</button>
+          <button onclick="sendEmailAvailabilityBSE()">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
+          <button onclick="sendEmailRotationBSE()">Building Rotation</button>
+
+        </div>
+      </section>
+      <section class="OneDrive" id="OneDrive">
+        <h1>OneDrive</h1>
+        <div class="container">
+          <a href="https://web.whatsapp.com/" target="_blank"><button class="WhatsApp">WhatsApp</button></a>
+          <a href="https://docdata.hrofficeplanning.nl/site/Login.aspx" target="_blank"><button class="Isabel">Isabel</button></a>
+          <a href="https://mysso.cevalogistics.com/oxauth/authorize.htm?scope=openid+email+user_name&acr_values=urn%3Aoasis%3Anames%3Atc%3ASAML%3A2.0%3Aac%3Aclasses%3AMobileTwoFactorUnregistered&response_type=code&redirect_uri=https%3A%2F%2Fmysso.cevalogistics.com%2Fidp%2FAuthn%2FoxAuth&state=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJzdGF0ZSI6IlJ4M1haMTNQUXoiLCJjb252ZXJzYXRpb24iOiJlMXMxIn0.&nonce=dJfsR5sHbc&client_id=1101.eec4546f-5052-4e9d-bc9d-38af21ab9272" target="_blank"><button class="MyHR">MyHR</button></a>
+          <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=umedzr71f0O-I0R3HRFePDHBVyHKVgNNnR958jpY1VtUNUJUUUEyVktLWUQxUVA3RU9ZWkpUNVlMNS4u" target="_blank"><button class="Survey">Survey</button></a>
+          <a href="https://cevalogisticsoffice365-my.sharepoint.com/personal/maximiliano_ocampo_cevalogistics_com/_layouts/15/onedrive.aspx?id=%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%2FGeneral%2FFlex%20Coaches%2FFC%2FFC%20goal%202024&listurl=https%3A%2F%2Fcevalogisticsoffice365%2Esharepoint%2Ecom%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents&remoteItem=%7B%22mp%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Fcevalogisticsoffice365%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fmaximiliano%5Focampo%5Fcevalogistics%5Fcom%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Fcevalogisticsoffice365%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fmaximiliano%5Focampo%5Fcevalogistics%5Fcom%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Fmaximiliano%5Focampo%5Fcevalogistics%5Fcom%2FDocuments%2FFC%22%7D%2C%22rsi%22%3A%7B%22listFullUrl%22%3A%22https%3A%2F%2Fcevalogisticsoffice365%2Esharepoint%2Ecom%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%22%2C%22rootFolder%22%3A%22%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%2FGeneral%2FFlex%20Coaches%2FFC%2FFC%20goal%202024%22%2C%22webAbsoluteUrl%22%3A%22https%3A%2F%2Fcevalogisticsoffice365%2Esharepoint%2Ecom%2Fsites%2FEurope%2DNL%2DWorkforceOperations%22%7D%7D&view=0&viewid=80418985%2D4260%2D4e66%2Db50d%2D914a2f7d9ba5" target="_blank"><button class="Goals">Goals</button></a>
+          <a href="https://teams.microsoft.com/_#/conversations/?ctx=channel" target="_blank"><button class="Teams">Teams</button></a>
+          <a href="https://cevalogisticsoffice365-my.sharepoint.com/personal/maximiliano_ocampo_cevalogistics_com/_layouts/15/onedrive.aspx?id=%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%2FGeneral%2FFlex%20Coaches%2FFC%2FBV%27s%2FArea%20West%2FPresentations&listurl=https%3A%2F%2Fcevalogisticsoffice365%2Esharepoint%2Ecom%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents&viewid=80418985%2D4260%2D4e66%2Db50d%2D914a2f7d9ba5&view=0" target="_blank"><button class="Presentation FC">Presentation FC</button></a>
+          <a href="https://routenet.nl/?culture=nl" target="_blank"><button>KM Counter</button></a>
+          <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7B79C4F093-3AD8-40FE-801A-CE43F808F632%7D&file=Flexcoach%20Email%20Templates.xlsx&action=default&mobileredirect=true" target="_blank"><button class="Template">Email's Templates</button></a>
+          <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7B15695DF2-2A75-4CD8-B178-34154482B2B9%7D&file=NL%20Declaration%20Form%20Travel%20Allowance%20CEVA.xlsx&action=default&mobileredirect=true" target="_blank"><button class="TravelCost">Travel Report</button></a>
+        </div>
+      </section>
+      <section class="g-drive" id="g-drive">
+        <h1>G-Drive</h1>
+        <div class="container">
+          <a href="https://drive.google.com/drive/shared-with-me" target="_blank"><button>G-Drive</button></a>
+          <a href="https://drive.google.com/drive/folders/1d6aQBSVoLD_P9R0dyxqUg5iewHa8Lw_t" target="_blank"><button>Instrooms</button></a>
+          <a href="https://docs.google.com/spreadsheets/d/1OYzhwSeO2QVJUD2VlWtYgSEcj0EF5JYjrjFNc3-Ic5s/edit#gid=0" target="_blank"><button>Survey List</button></a>
+          <a href="https://docs.google.com/spreadsheets/d/1Dv-o6O4P8VbQiBYOpan4y4iv5O3tohevWsWIaQps4qw/edit#gid=0" target="_blank"><button>Contacts Google</button></a>
+          <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><button>G-Mail</button></a>
+          <a href="https://drive.google.com/drive/folders/1eZ8--r5kZw0NUtQ3qNLehLaQCqLFzFtg" target="_blank"><button>Presentation</button></a>
+          <a href="https://drive.google.com/drive/folders/1wufSLwRMBC3XecvYjprdewRxJtpjr8Rc" target="_blank"><button>Flyers FC</button></a>
+          <a href="https://docs.google.com/spreadsheets/d/1NEKqrg-CL44Cz8p0zeBO19Z4nzZScRsWFKluWiG4HMk/edit#gid=0" target="_blank"><button>Issue File</button></a>
+          <a href="https://drive.google.com/drive/folders/1qZsN6Epkeb1XkDWeA55AnYKcquFT34xn" target="_blank"><button>Templates</button></a>
+        </div>
+      </section>
+  </main>
+  <footer>
+    <div class="footer-content"><p>Made by Adam Dorobek</p></div>
+  </footer>
+  </body>
+</html>
+
