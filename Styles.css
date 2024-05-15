@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: 'Anton', serif;
+    font-family: 'Anton', sans-serif;
     background-color: rgb(43, 0, 13);
   }
   
@@ -24,7 +24,7 @@ body {
   
   h2, h3 {
     font-family: 'Anton', sans-serif;
-    color: white;
+    color: rgb(247, 230, 211);
   }
 
 header {
@@ -36,8 +36,8 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    color: #dfdfe2;
-}
+    color: rgb(247, 230, 211);
+  }
   
 #logo {
     width: max(100px, 18vw);
@@ -110,30 +110,11 @@ main {
     align-items: center;
 }
 
-.container_loc {
-    display: flex;
-    padding: 10px;
-    flex: 0 0 auto;
-    width: max-content;
-    margin: 15px;
-    align-items: center;
-    max-width: max-content;
-    margin-top: 20px;
-    justify-content: center;
-
-
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 13px;
-    background: linear-gradient(to bottom right,rgb(136, 22, 56),rgb(216, 61, 103));
-    border: 3px solid black;
-    outline: 3px solid #000749;
-}
-
 .container {
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     grid-gap: 10px;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
     flex: 0 0 auto;
     width: max-content;
     margin: 15px;
@@ -141,7 +122,6 @@ main {
     max-width: max-content;
     margin-top: 20px;
     justify-content: space-between;
-
 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 13px;
@@ -158,7 +138,6 @@ main {
     flex: 1;
     width: 170px;
     height: 50px;
-    margin: 3px;
 }
 
 section {
@@ -217,7 +196,7 @@ footer {
     }
   
     #logo,
-    h1 {
+    #title {
       display: none;
     } 
     
