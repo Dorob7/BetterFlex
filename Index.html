@@ -4,12 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Styles.css" />
-    <script src="Java.js"></script>
   </head>
   <body>
     <main>
      <header> 
-      <h1>FC Automatization</h1>
+      <h1 id = "title">FC Automatization</h1>
       <img id="logo" src="https://cdn.worldvectorlogo.com/logos/ceva-logistics-1.svg">
       <nav>
         <ul>
@@ -40,39 +39,42 @@
         <div class="container loc">
           <h2>IND</h2>
           <button id = "ind" style="cursor: not-allowed;">No Presentielijst</button>
-          <button id = "ind" onclick="sendEmailAvailabilityIND()">Flex Coach Availability</button>
-          <button id = "ind" onclick="sendEmailRotationIND()">Building Rotation</button>
+          <button id = "ind" onclick="sendEmailAvailability('ind')">Flex Coach Availability</button>
+          <button id = "ind" onclick="sendEmailRotation('ind')">Building Rotation</button>
           <button id = "ind" onclick="sendEmailMulti('ind')">Instroom Multipand</button>
+          <button id = "ind" onclick="sendEmailWFP('ind')">WFP</button>
         </div>
         <div class="container loc">
           <h2>VW</h2>
-          <button id = "vw" onclick="sendEmailPresentielijstVW()">Presentielijst</button>
-          <button id = "vw" onclick="sendEmailAvailabilityVW()">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
-          <button id = "vw" onclick="sendEmailRotationVW()">Building Rotation</button>
+          <button id = "vw" onclick="sendEmailPresentielijst('vw')">Presentielijst</button>
+          <button id = "vw" onclick="sendEmailAvailability('vw')">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
+          <button id = "vw" onclick="sendEmailRotation('vw')">Building Rotation</button>
           <button id = "vw" onclick="sendEmailMulti('vw')">Instroom Multipand</button>
-
+          <button id = "vw" onclick="sendEmailWFP('vw')">WFP</button>
         </div> 
         <div class="container loc">
           <h2>BFC</h2>
-          <button id = "bfc" onclick="sendEmailPresentielijstBFC()">Presentielijst</button>
-          <button id = "bfc" onclick="sendEmailAvailabilityBFC()">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
-          <button id = "bfc" onclick="sendEmailRotationBFC()">Building Rotation</button>
+          <button id = "bfc" onclick="sendEmailPresentielijst('bfc')">Presentielijst</button>
+          <button id = "bfc" onclick="sendEmailAvailability('bfc')">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
+          <button id = "bfc" onclick="sendEmailRotation('bfc')">Building Rotation</button>
           <button id = "bfc" onclick="sendEmailMulti('bfc')">Instroom Multipand</button>
-
+          <button id = "bfc" onclick="sendEmailWFP('bfc')">WFP</button>
         </div>
         <div class="container loc">
           <h2>BRC</h2>
-          <button id = "brc" onclick="sendEmailPresentielijstBRC()">Presentielijst</button>
-          <button id = "brc" onclick="sendEmailAvailabilityBRC()">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
-          <button id = "brc" onclick="sendEmailRotationBRC()">Building Rotation</button>
+          <button id = "brc" onclick="sendEmailPresentielijst('brc')">Presentielijst</button>
+          <button id = "brc" onclick="sendEmailAvailability('brc')">Flex Coach Availability</button>
+          <button id = "brc" onclick="sendEmailRotation('brc')">Building Rotation</button>
           <button id = "brc" onclick="sendEmailMulti('brc')">Instroom Multipand</button>
+          <button id = "brc" onclick="sendEmailWFP('brc')">WFP</button>
         </div>
         <div class="container loc">
           <h2>BSE</h2>
           <button id = "bse" style="cursor: not-allowed;">No Presentielijst</button>
-          <button id = "bse" onclick="sendEmailAvailabilityBSE()">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
-          <button id = "bse" onclick="sendEmailRotationBSE()">Building Rotation</button>
+          <button id = "bse" onclick="sendEmailAvailability('bse')">Flex Coach Availability</button>
+          <button id = "bse" onclick="sendEmailRotation('bse')">Building Rotation</button>
           <button id = "bse" onclick="sendEmailMulti('bse')">Instroom Multipand</button>
+          <button id = "bse" onclick="sendEmailWFP('bse')">WFP</button>
         </div>
       </section>
       <section class="OneDrive" id="OneDrive">
@@ -80,7 +82,7 @@
         <div class="container">
           <a href="https://web.whatsapp.com/" target="_blank"><button class="WhatsApp">WhatsApp</button></a>
           <a href="https://docdata.hrofficeplanning.nl/site/Login.aspx" target="_blank"><button class="Isabel">Isabel</button></a>
-          <a href="https://mysso.cevalogistics.com/oxauth/authorize.htm?scope=openid+email+user_name&acr_values=urn%3Aoasis%3Anames%3Atc%3ASAML%3A2.0%3Aac%3Aclasses%3AMobileTwoFactorUnregistered&response_type=code&redirect_uri=https%3A%2F%2Fmysso.cevalogistics.com%2Fidp%2FAuthn%2FoxAuth&state=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJzdGF0ZSI6IlJ4M1haMTNQUXoiLCJjb252ZXJzYXRpb24iOiJlMXMxIn0.&nonce=dJfsR5sHbc&client_id=1101.eec4546f-5052-4e9d-bc9d-38af21ab9272" target="_blank"><button class="MyHR">MyHR</button></a>
+          <a href="https://performancemanager.successfactors.eu/sf/home?bplte_company=C0002716868P&_s.crb=%2b9GPJLWLk1Ah%2fkzMjc5mIBL80uYdVV8KVNyaB2LFkkE%3d" target="_blank"><button class="MyHR">MyHR</button></a>
           <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=umedzr71f0O-I0R3HRFePDHBVyHKVgNNnR958jpY1VtUNUJUUUEyVktLWUQxUVA3RU9ZWkpUNVlMNS4u" target="_blank"><button class="Survey">Survey</button></a>
           <a href="https://cevalogisticsoffice365-my.sharepoint.com/personal/maximiliano_ocampo_cevalogistics_com/_layouts/15/onedrive.aspx?id=%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%2FGeneral%2FFlex%20Coaches%2FFC%2FFC%20goal%202024&listurl=https%3A%2F%2Fcevalogisticsoffice365%2Esharepoint%2Ecom%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents&remoteItem=%7B%22mp%22%3A%7B%22webAbsoluteUrl%22%3A%22https%3A%2F%2Fcevalogisticsoffice365%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fmaximiliano%5Focampo%5Fcevalogistics%5Fcom%22%2C%22listFullUrl%22%3A%22https%3A%2F%2Fcevalogisticsoffice365%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fmaximiliano%5Focampo%5Fcevalogistics%5Fcom%2FDocuments%22%2C%22rootFolder%22%3A%22%2Fpersonal%2Fmaximiliano%5Focampo%5Fcevalogistics%5Fcom%2FDocuments%2FFC%22%7D%2C%22rsi%22%3A%7B%22listFullUrl%22%3A%22https%3A%2F%2Fcevalogisticsoffice365%2Esharepoint%2Ecom%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%22%2C%22rootFolder%22%3A%22%2Fsites%2FEurope%2DNL%2DWorkforceOperations%2FShared%20Documents%2FGeneral%2FFlex%20Coaches%2FFC%2FFC%20goal%202024%22%2C%22webAbsoluteUrl%22%3A%22https%3A%2F%2Fcevalogisticsoffice365%2Esharepoint%2Ecom%2Fsites%2FEurope%2DNL%2DWorkforceOperations%22%7D%7D&view=0&viewid=80418985%2D4260%2D4e66%2Db50d%2D914a2f7d9ba5" target="_blank"><button class="Goals">Goals</button></a>
           <a href="https://teams.microsoft.com/_#/conversations/?ctx=channel" target="_blank"><button class="Teams">Teams</button></a>
@@ -91,7 +93,7 @@
         </div>
       </section>
       <section class="g-drive" id="g-drive">
-        <h1>G-Drive</h1>
+        <h1>G-Drive</h1><h3>(Zalando)</h3>
         <div class="container">
           <a href="https://drive.google.com/drive/shared-with-me" target="_blank"><button>G-Drive</button></a>
           <a href="https://drive.google.com/drive/folders/1d6aQBSVoLD_P9R0dyxqUg5iewHa8Lw_t" target="_blank"><button>Instrooms</button></a>
@@ -108,6 +110,7 @@
   <footer>
     <div class="footer-content"><p>Made by Adam Dorobek</p></div>
   </footer>
+  <script src="Java.js"></script>
   </body>
 </html>
 
