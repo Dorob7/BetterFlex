@@ -153,6 +153,9 @@ footer {
     margin: 0;
     color: rgb(247, 230, 211);
 }
+.x {
+    display: none;
+}    
 
 @media (max-width: 1200px) {
     header {
