@@ -37,48 +37,48 @@
         <h1>Email's Templates</h1>
         <div class="container-loc">
           <h2>IND</h2>
-          <button id = "ind" style="cursor: not-allowed;">No Presentielijst</button>
+          <button id = "ind" style="cursor: not-allowed;">No Presentielijst</button> 
+          <button id = "ind" style="cursor: not-allowed">No Presentielijst</button>
+          <button id = "ind" onclick="sendEmailWFP('ind')">WFP</button>
+          <button id = "ind" onclick="sendEmailMulti('ind')">Instroom Multipand</button>
           <button id = "ind" onclick="sendEmailAvailability('ind')">Flex Coach Availability</button>
           <button id = "ind" onclick="sendEmailRotation('ind')">Building Rotation</button>
-          <button id = "ind" onclick="sendEmailMulti('ind')">Instroom Multipand</button>
-          <button id = "ind" onclick="sendEmailWFP('ind')">WFP</button>
-          <button id = "ind" onclick="sendEmailInstroom('ind')">Instroom</button>
         </div>
         <div class="container-loc">
           <h2>VW</h2>
           <button id = "vw" onclick="sendEmailPresentielijst('vw')">Presentielijst</button>
-          <button id = "vw" onclick="sendEmailAvailability('vw')">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
-          <button id = "vw" onclick="sendEmailRotation('vw')">Building Rotation</button>
-          <button id = "vw" onclick="sendEmailMulti('vw')">Instroom Multipand</button>
+          <button id = "vw" onclick="sendEmailPresentielijstWeekend('vw')">Presentielijst Weekend</button>
           <button id = "vw" onclick="sendEmailWFP('vw')">WFP</button>
-          <button id = "vw" onclick="sendEmailInstroom('vw')">Instroom</button>
+          <button id = "vw" onclick="sendEmailMulti('vw')">Instroom Multipand</button>
+          <button id = "vw" onclick="sendEmailAvailability('vw')">Flex Coach Availability</button>
+          <button id = "vw" onclick="sendEmailRotation('vw')">Building Rotation</button>
         </div> 
         <div class="container-loc">
           <h2>BFC</h2>
           <button id = "bfc" onclick="sendEmailPresentielijst('bfc')">Presentielijst</button>
-          <button id = "bfc" onclick="sendEmailAvailability('bfc')">Flex Coach Availability</button><!--To Do in Java. Get emails to put-->
-          <button id = "bfc" onclick="sendEmailRotation('bfc')">Building Rotation</button>
-          <button id = "bfc" onclick="sendEmailMulti('bfc')">Instroom Multipand</button>
+          <button id = "bfc" onclick="sendEmailPresentielijstWeekend('bfc')">Presentielijst Weekend</button> 
           <button id = "bfc" onclick="sendEmailWFP('bfc')">WFP</button>
-          <button id = "bfc" onclick="sendEmailInstroom('bfc')">Instroom</button>
+          <button id = "bfc" onclick="sendEmailMulti('bfc')">Instroom Multipand</button>
+          <button id = "bfc" onclick="sendEmailAvailability('bfc')">Flex Coach Availability</button>
+          <button id = "bfc" onclick="sendEmailRotation('bfc')">Building Rotation</button>
         </div>
         <div class="container-loc">
           <h2>BRC</h2>
           <button id = "brc" onclick="sendEmailPresentielijst('brc')">Presentielijst</button>
-          <button id = "brc" onclick="sendEmailAvailability('brc')">Flex Coach Availability</button>
-          <button id = "brc" onclick="sendEmailRotation('brc')">Building Rotation</button>
-          <button id = "brc" onclick="sendEmailMulti('brc')">Instroom Multipand</button>
+          <button id = "brc" onclick="sendEmailPresentielijstWeekend('brc')">Presentielijst Weekend</button>
           <button id = "brc" onclick="sendEmailWFP('brc')">WFP</button>
-          <button id = "brc" onclick="sendEmailInstroom('brc')">Instroom</button>
+          <button id = "brc" onclick="sendEmailMulti('brc')">Instroom Multipand</button> 
+          <button id = "brc" onclick="sendEmailAvailability('brc')">Flex Coach Availability</button>
+          <button id = "brc" onclick="sendEmailRotation('brc')">Building Rotation</button>                   
         </div>
         <div class="container-loc">
           <h2>BSE</h2>
           <button id = "bse" style="cursor: not-allowed;">No Presentielijst</button>
-          <button id = "bse" onclick="sendEmailAvailability('bse')">Flex Coach Availability</button>
-          <button id = "bse" onclick="sendEmailRotation('bse')">Building Rotation</button>
-          <button id = "bse" onclick="sendEmailMulti('bse')">Instroom Multipand</button>
+          <button id = "bse" style="cursor: not-allowed">No Presentielijst</button>
           <button id = "bse" onclick="sendEmailWFP('bse')">WFP</button>
-          <button id = "bse" onclick="sendEmailInstroom('bse')">Instroom</button>
+          <button id = "bse" onclick="sendEmailMulti('bse')">Instroom Multipand</button>
+          <button id = "bse" onclick="sendEmailAvailability('bse')">Flex Coach Availability</button>          
+          <button id = "bse" onclick="sendEmailRotation('bse')">Building Rotation</button>
         </div>
       </section>
       <section class="OneDrive" id="OneDrive">
@@ -96,7 +96,6 @@
           <a href="https://cevalogisticsoffice365.sharepoint.com/:x:/r/sites/Europe-NL-WorkforceOperations/_layouts/15/Doc.aspx?sourcedoc=%7B15695DF2-2A75-4CD8-B178-34154482B2B9%7D&file=NL%20Declaration%20Form%20Travel%20Allowance%20CEVA.xlsx&action=default&mobileredirect=true" target="_blank"><button class="TravelCost">Travel Report</button></a>
         </div>
       </section>
-      <p class='x' id='x'><b>X</b></p>
   </main>
   <footer>
     <div class="footer-content"><p>Made by Adam Dorobek</p></div>
