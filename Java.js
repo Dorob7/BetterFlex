@@ -1,4 +1,3 @@
-// Function to get the name of the day of the week
 function getDayName(date) {
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   return days[date.getDay()];
@@ -12,7 +11,6 @@ var month = (currentDate.getMonth() + 1).toString().padStart(2, "0");
 var day = currentDate.getDate().toString().padStart(2, "0");
 var formattedDate = day + "-" + month + "-" + year;
 
-// Get the name of the day
 var dayName = getDayName(currentDate);
 
 const emailIND =
@@ -53,7 +51,7 @@ function sendEmailAvailability(buttonId) {
     default:
       break;
   }
-  var startTime = prompt("Enter the start time:"); // Get user input for time
+  var startTime = prompt("Enter the start time:");
   var endTime = prompt("Enter the ending time:");
   var body = `
   Good day everyone,
@@ -284,11 +282,10 @@ function sendEmailPresentielijstWeekend(buttonId) {
 
   var currentDate = new Date();
   var currentDay = currentDate.getDate();
-  var currentMonth = currentDate.getMonth() + 1; // Months are zero-indexed
+  var currentMonth = currentDate.getMonth() + 1; 
   var currentYear = currentDate.getFullYear();
   var days = [];
 
-  // Calculate the days for tomorrow, the day after, and two days after tomorrow
   for (var i = 1; i <= 3; i++) {
     var nextDay = currentDay + i;
     days.push(nextDay.toString().padStart(2, "0"));
