@@ -30,6 +30,7 @@ h2, h3 {
     color: rgb(247, 230, 211);
     font-size: 3rem;
     margin: 0;
+    text-align: center;
 }
 
 header {
@@ -45,10 +46,10 @@ header {
 }
 
 #logo {
-    width: max(100px, 18vw);
+    width: max(100px, 10vw);
     padding: 0;
     margin: 0;
-    align-self: auto;
+    align-self: center;
 }
 
 nav {
