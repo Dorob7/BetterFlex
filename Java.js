@@ -1,3 +1,4 @@
+// Function to get the name of the day of the week
 function getDayName(date) {
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   return days[date.getDay()];
@@ -11,6 +12,7 @@ var month = (currentDate.getMonth() + 1).toString().padStart(2, "0");
 var day = currentDate.getDate().toString().padStart(2, "0");
 var formattedDate = day + "-" + month + "-" + year;
 
+// Get the name of the day
 var dayName = getDayName(currentDate);
 
 const emailIND =
@@ -51,7 +53,7 @@ function sendEmailAvailability(buttonId) {
     default:
       break;
   }
-  var startTime = prompt("Enter the start time:");
+  var startTime = prompt("Enter the start time:"); // Get user input for time
   var endTime = prompt("Enter the ending time:");
   var body = `
   Good day everyone,
@@ -176,13 +178,13 @@ function sendEmailMulti(buttonId) {
       break;
   }
 
-  var department = prompt("Enter the deparrment:");
+  var department = prompt("Enter the department:");
   var emailLink =
     "mailto:" +
     email +
     "?subject=" +
     encodeURIComponent(building + " - Instroom Multipand Update " + date) +
-    `&body=Good day,%0D%0A%0D%0ABelow you will find update for the new instroom/Crosstraining multipand from ${department} department.%0D%0A%0D%0A@Workforce, could you please remove the planning and skills for the no-shows and inform the agency about this?`;
+    `&body=Good day,%0D%0A%0D%0ABelow you will find update for the new instroom/Crosstraining multipand from the ${department} department.%0D%0A%0D%0A@Workforce, could you please remove the planning and skills for the no-shows and inform the agency about this?`;
   window.location.href = emailLink;
 }
 
@@ -282,10 +284,11 @@ function sendEmailPresentielijstWeekend(buttonId) {
 
   var currentDate = new Date();
   var currentDay = currentDate.getDate();
-  var currentMonth = currentDate.getMonth() + 1; 
+  var currentMonth = currentDate.getMonth() + 1; // Months are zero-indexed
   var currentYear = currentDate.getFullYear();
   var days = [];
 
+  // Calculate the days for tomorrow, the day after, and two days after tomorrow
   for (var i = 1; i <= 3; i++) {
     var nextDay = currentDay + i;
     days.push(nextDay.toString().padStart(2, "0"));
@@ -298,7 +301,7 @@ function sendEmailPresentielijstWeekend(buttonId) {
     email +
     "&subject=" +
     encodeURIComponent(building + " - Presentielijst " + formattedDate) +
-    "&body=Good%20evening,%0D%0A%0D%0AIn%20the%20attachment,%20You%20will%20find%20the%20presentielijst%20for%20weekend%20and%20Monday" +
+    "&body=Good%20evening,%0D%0A%0D%0AIn%20the%20attachment,%20You%20will%20find%20the%20presentielijst%20for%20the%20weekend%20and%20Monday" +
     " " +
     formattedDate +
     ".%0D%0A%0D%0AHave%20a%20nice%20weekend!";
