@@ -304,6 +304,7 @@ function sendEmailPresentielijstWeekend(buttonId) {
     "&body=Good%20evening,%0D%0A%0D%0AIn%20the%20attachment,%20You%20will%20find%20the%20presentielijst%20for%20the%20weekend%20and%20Monday" +
     " " +
     formattedDate +
+    "%0D%0A%0D%0ACould%20you%20please%20prepare%20the%20badges%20for%20the%20new%20instroom%20on%20the%209000%20account?" + 
     ".%0D%0A%0D%0AHave%20a%20nice%20weekend!";
   window.location.href = emailLink;
 }
